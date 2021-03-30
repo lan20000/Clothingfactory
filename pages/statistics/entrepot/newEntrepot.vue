@@ -38,14 +38,15 @@
 					</block>
 				</tables>
 				<paginate :page="page" :showPageSize="true" @switchPage="changePaginate"></paginate>
-				<inputs type="number" name="x.produceNumber|数量" title="数量" :disabled="workshopId"
+				<inputs type="number" name="x.produceNumber|匹数" title="匹数" :disabled="workshopId"
 					:value="data.produceNumber"></inputs>
-				<inputs type="number" name="x.layerNumber|层数" title="层数" :disabled="workshopId" :value="data.layerNumber">
+				<inputs type="number" name="x.layerNumber|层数" v-if="workshopId" title="层数" :disabled="workshopId" :value="data.layerNumber">
 				</inputs>
 				<uploads title="附图" name="x.images" v-model="data.images" :count="workshopId ? data.images.length : 5">
 				</uploads>
-				<inputs type="number" v-model="takeNum" title="提货数量" v-if="workshopId" :value="takeNum"></inputs>
-
+				<inputs type="number" v-model="takeNum" title="提货匹数" v-if="workshopId" :value="takeNum"></inputs>
+				<textareas title="备注" name="x.comment|备注|0~200|empty"
+				:value="data.comment" placeholder="备注内容"></textareas>
 			</view>
 			<labels class="mt40" v-if="workshopId">
 				<button class="btn greenBg w80" @click="submiCargo">提货</button>
@@ -64,7 +65,7 @@
 			<tables v-if="workshopId" :list="page.list">
 				<block slot="thead">
 					<th>序号</th>
-					<th>提货数量</th>
+					<th>提货匹数</th>
 					<th>缸号</th>
 					<th>操作人</th>
 				</block>
@@ -96,7 +97,7 @@
 				customer: '', //客户id
 				roleList: [],
 				workshopId: null, //车间ID
-				takeNum: 0, //提货数量
+				takeNum: 0, //提货匹数
 				page: {
 					pageNumber: 1,
 					lastPage: true,
@@ -128,7 +129,7 @@
 							if (this.takeNum == 0) {
 								return uni.showToast({
 									icon: 'none',
-									title: '提货不能大于生产数量',
+									title: '提货不能大于生产匹数',
 									duration: 2000
 								});
 							}
@@ -136,7 +137,7 @@
 									.produceNumber) - Number(this.data.takeNumber)) < this.takeNum) {
 								uni.showToast({
 									icon: 'none',
-									title: '提货不能大于生产数量',
+									title: '提货不能大于生产匹数',
 									duration: 2000
 								});
 								return;
@@ -262,7 +263,7 @@
 				}
 				if (Number(data['x.produceNumber']) > ((this.Dyelotdata.horse) - (this.Dyelotdata.output))) {
 					uni.showToast({
-						title: '生产数量已超量',
+						title: '生产匹数已超量',
 						icon: 'none'
 					});
 					return;
@@ -276,7 +277,7 @@
 				data['x.oid'] = this.Dyelotdata._id; //订单ID
 				data['x.head'] = this.user.username; //操作者信息
 				data['x.customerID'] = this.Dyelotdata.customerID; //用户ID
-				data['x.takeNumber'] = 0; //提货数量记录
+				data['x.takeNumber'] = 0; //提货匹数记录
 				uni.showLoading({
 					title: "正在处理中...",
 					mask: true

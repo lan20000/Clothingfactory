@@ -4,7 +4,7 @@
 			<view class="w650">
 				<datepicker title="时间" type="datetime" name="x.time|时间" :value="data.time"></datepicker>
 				<view style="display: flex;">
-					<inputs title="客户姓名" v-model="customerName" placeholder="请输入客户姓名" :disabled="orderid"></inputs>
+					<inputs title="客户姓名" style="flex: 1;padding-right: 0rpx;" v-model="customerName" placeholder="请输入客户姓名" :disabled="orderid"></inputs>
 					<view class="" style="display: flex;align-items: center;" v-if="!orderid">
 						<button class="btn greenBg w80" @click="getlist">查询</button>
 					</view>
@@ -41,16 +41,18 @@
 				<inputs name="x.color|颜色" title="颜色" :disabled="orderid" :value="data.color"></inputs>
 				<inputs name="x.coding|缸号" title="缸号" :disabled="orderid" :value="data.coding"></inputs>
 				<inputs name="x.horse|匹数" type="number" title="匹数" :disabled="orderid" :value="data.horse"></inputs>
-				<!-- <inputs name="x.amount|数量" type="number" title="数量" :disabled="orderid" :value="data.amount"></inputs> -->
-				<inputs name="x.comment|备注|0~200|empty" :disabled="orderid" title="备注" :value="data.comment"
-					placeholder="选填"></inputs>
+				<!-- <inputs name="x.amount|匹数" type="number" title="匹数" :disabled="orderid" :value="data.amount"></inputs> -->
+				<!-- <inputs name="x.comment|备注|0~200|empty" :disabled="orderid" title="备注" :value="data.comment"
+					placeholder="选填"></inputs> -->
+				<textareas title="备注" name="x.comment|备注|0~200|empty" 
+				:value="data.comment" placeholder="备注内容"></textareas>
 				<uploads title="附图" name="x.images" v-model="data.images" :count="orderid ? data.images.length : 20">
 				</uploads>
 				<labels class="mt40" v-if="orderid">
 					<button class="btn greenBg w80" @click="bcc.goBack()">返回</button>
 				</labels>
 				<!--订单追踪列表-->
-				<quote class="titleRow" v-if="orderid" :title="'订单跟踪  |  当前生产数量:'+data.output" color="#0295f9"></quote>
+				<quote class="titleRow" v-if="orderid" :title="'订单跟踪  |  当前生产匹数:'+data.output" color="#0295f9"></quote>
 				<tables v-if="orderid" :list="userPage.list" :showEmpty="false">
 					<block slot="thead">
 						<th>创建时间</th>
@@ -240,7 +242,7 @@
 				data['x.output'] = 0; //已产出
 				data['x.username'] = this.user.username; //操作者
 				data['x.customerID'] = this.customerSpan._id; //客户ID
-				data['x.orderNum'] = this.customerSpan.codingTotal; //用户订单数量
+				data['x.orderNum'] = this.customerSpan.codingTotal; //用户订单匹数
 				this.bcc.call({
 					keepStr: true,
 					url: 'order/order/save',

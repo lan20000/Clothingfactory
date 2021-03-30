@@ -23,7 +23,7 @@
 						</view>
 						<view class="content-box-text">
 							<text>层数：{{x.layerNumber}}</text>
-							<text>生产数量：{{x.produceNumber}}</text>
+							<text>生产匹数：{{x.produceNumber}}</text>
 						</view>
 						<view class="content-box-text">
 							<text>接待者：{{x.username}}</text>
@@ -46,7 +46,7 @@
 					<td>布料</td>
 					<td>层数</td>
 					<td>缸数</td>
-					<td>生产数量</td>
+					<td>生产匹数</td>
 					<td>订单状态</td>
 					<td>接待者</td>
 					<td>操作者</td>

@@ -124,7 +124,7 @@
 				type : String ,
 				default : "icon"
 			},
-			countKey :{ //数量
+			countKey :{ //匹数
 				type : String ,
 				default : "count"
 			},

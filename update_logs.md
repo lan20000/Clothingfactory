@@ -195,5 +195,5 @@ this.getPage()方法增加dataInDb可选参数，list和dataInDb二选一传入�
 
 * 【PC端组件】
   + 修复 `paginate` 组件显示省略号太多的bug
-  + `conditions` 组件增加外显表单数量属性，可以控制外显的筛选表单数量。修复日期重置时，结束日期未重置的bug。
+  + `conditions` 组件增加外显表单匹数属性，可以控制外显的筛选表单匹数。修复日期重置时，结束日期未重置的bug。
 

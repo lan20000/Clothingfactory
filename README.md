@@ -517,7 +517,7 @@ data() {
 |isRound|Boolean		|是否是圆形图片，否则是方形图片，默认false	|
 |list	|String，Array	|要展示的图片列表，可以是图片链接数组，也可以是英文逗号分开的多个图片链接，如果是json数组，需要指定valueKey	|
 |valueKey	|String	|要展示的图片数据如果是json数组，可以通过该属性指定json数据中的哪个键名为图片链接	|
-|count	|Number	|要展示的图片的数量，超出数量不展示，-1为不限制，默认-1	|
+|count	|Number	|要展示的图片的匹数，超出匹数不展示，-1为不限制，默认-1	|
 |disabled	|Boolean	|是否显示右上角的删除按钮，是否可以编辑，默认false	|
 |@remove	|	|当删除图片时触发回调	|
 
@@ -533,7 +533,7 @@ data() {
 |isRound|Boolean		|是否是圆形，否则是方形，默认false	|
 |list	|String，Array	|要展示的文件列表，可以是文件链接数组，也可以是英文逗号分开的多个文件链接，如果是json数组，需要指定valueKey	|
 |valueKey	|String	|要展示的文件数据如果是json数组，可以通过该属性指定json数据中的哪个键名为文件链接	|
-|count	|Number	|要展示的文件的数量，超出数量不展示，-1为不限制，默认-1	|
+|count	|Number	|要展示的文件的匹数，超出匹数不展示，-1为不限制，默认-1	|
 |disabled	|Boolean	|是否显示右上角的删除按钮，是否可以编辑，默认false	|
 |@remove	|	|当删除文件时触发回调	|
 

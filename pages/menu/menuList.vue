@@ -151,7 +151,7 @@
 					
 					<view class="">
 						
-						<!-- 菜单组数量大于1且是一级菜单时方需要选择菜单组 -->
+						<!-- 菜单组匹数大于1且是一级菜单时方需要选择菜单组 -->
 						<radios v-if="data.type == 1 && groups.length > 0" title="菜单组" :defaultFirst="true" :list="groups" :value="data.group" name="x.group|请选择菜单组"></radios>
 						
 						<inputs name="x.name|菜单名称" title="菜单名称" :value="data.name"></inputs>
@@ -253,7 +253,7 @@
 				return this.list.filter(item=>item.type == 2 && item.parentId == this.rootId);
 			},
 			allGroups : function(e){
-				//此处仅统计一级菜单的数量
+				//此处仅统计一级菜单的匹数
 				var list = this.groups.map(item=>{
 					return {
 						...item ,

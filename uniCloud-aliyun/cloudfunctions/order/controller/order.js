@@ -82,7 +82,7 @@ module.exports = {
 		if (Serial.data.length > 0) {
 			return this.fail('请重新输入缸号！该缸号已重复');
 		}
-		//查询材料实际数量
+		//查询材料实际匹数
 		var record = this.findFirst(await Material.where({
 			'type': data.type
 		}).get());
@@ -106,7 +106,7 @@ module.exports = {
 			type: data.type, //布料类型
 			customer: data.customer, //客户姓名
 			color: data.color, //颜色
-			horse: data.horse //数量
+			horse: data.horse //匹数
 		});
 		return this.ok();
 	},

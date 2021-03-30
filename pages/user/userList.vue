@@ -27,7 +27,7 @@
 					<text>层数：{{x.layerNumber}}</text>
 				</view>
 				<view class="content-box-text">
-					<text>生产数量：{{x.produceNumber}}</text>
+					<text>生产匹数：{{x.produceNumber}}</text>
 					<text>订单状态：{{x.takeNumber==x.produceNumber ? '已完成' : '正在生产中'}}</text>
 				</view>
 				<view class="content-box-text">

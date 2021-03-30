@@ -93,11 +93,11 @@ module.exports = {
 		if (null == output || null == order) {
 			return this.fail("数据错误");
 		}
-		//更新订单数量
+		//更新订单匹数
 		var updateOutput = await Orderlist.doc(ids.orderid).update({
 			output: Number(order.output) - Number(output.produceNumber)
 		});
-		//更新订单数量
+		//更新订单匹数
 		await User.doc(ids.uid).update({
 			produceTotal: Number(Userdata.produceTotal) - Number(output.produceNumber)
 		});

@@ -27,7 +27,7 @@
 					<text>层数：{{x.type}}</text>
 				</view>
 				<view class="content-box-text">
-					<text>生产数量：{{x.produceNumber}}</text>
+					<text>生产匹数：{{x.produceNumber}}</text>
 					<text>订单状态：</text>
 				</view>
 				<view class="content-box-text">
@@ -56,7 +56,7 @@
 					<td>颜色</td>
 					<td>缸号</td>
 					<td>备注</td>
-					<!-- <td>数量</td> -->
+					<!-- <td>匹数</td> -->
 					<td>状态</td>
 					<td>生产匹数</td>
 					<td>查看</td>
