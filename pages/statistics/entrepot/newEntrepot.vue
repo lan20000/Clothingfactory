@@ -45,7 +45,7 @@
 				<uploads title="附图" name="x.images" v-model="data.images" :count="workshopId ? data.images.length : 5">
 				</uploads>
 				<inputs type="number" v-model="takeNum" title="提货匹数" v-if="workshopId" :value="takeNum"></inputs>
-				<textareas title="备注" name="x.comment|备注|0~200|empty"
+				<textareas title="备注" :disabled="workshopId" name="x.comment|备注|0~200|empty"
 				:value="data.comment" placeholder="备注内容"></textareas>
 			</view>
 			<labels class="mt40" v-if="workshopId">

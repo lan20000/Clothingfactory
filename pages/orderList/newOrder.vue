@@ -44,7 +44,7 @@
 				<!-- <inputs name="x.amount|匹数" type="number" title="匹数" :disabled="orderid" :value="data.amount"></inputs> -->
 				<!-- <inputs name="x.comment|备注|0~200|empty" :disabled="orderid" title="备注" :value="data.comment"
 					placeholder="选填"></inputs> -->
-				<textareas title="备注" name="x.comment|备注|0~200|empty" 
+				<textareas title="备注" :disabled="orderid" name="x.comment|备注|0~200|empty" 
 				:value="data.comment" placeholder="备注内容"></textareas>
 				<uploads title="附图" name="x.images" v-model="data.images" :count="orderid ? data.images.length : 20">
 				</uploads>
