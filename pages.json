@@ -1,0 +1,167 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/login/login",
+			"style": {
+				"leftWindow": false,
+				"topWindow": false,
+				"navigationBarTitleText": "登陆"
+			}
+		}, {
+			"path": "pages/menu/menuList",
+			"style": {
+				"navigationBarTitleText": "菜单列表"
+			}
+		}, {
+			"path": "pages/role/roleEdit",
+			"style": {
+				"navigationBarTitleText": "编辑角色"
+			}
+		}, {
+			"path": "pages/role/roleList",
+			"style": {
+				"navigationBarTitleText": "角色列表"
+			}
+		}, {
+			"path": "pages/user/userEdit",
+			"style": {
+				"navigationBarTitleText": "编辑用户"
+			}
+		}, {
+			"path": "pages/user/userList",
+			"style": {
+				"navigationBarTitleText": "用户列表"
+			}
+		}, {
+			"path": "pages/operateLog/operateLogList",
+			"style": {
+				"navigationBarTitleText": "操作日志"
+			}
+		}, {
+			"path": "pages/paramConfig/paramConfigEdit",
+			"style": {
+				"navigationBarTitleText": "系统参数设置"
+			}
+		}, {
+			"path": "pages/paramConfig/paramConfigList",
+			"style": {
+				"navigationBarTitleText": "系统参数"
+			}
+		}, {
+			"path": "pages/setting/setting",
+			"style": {}
+		}, {
+			"path": "pages/statistics/entrepot/entrepot",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"style": {
+					"navigationBarTitleText": "车间列表"
+				}
+			}
+		}, {
+			"path": "pages/statistics/entrepot/newEntrepot",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"style": {
+					"navigationBarTitleText": "车间"
+				}
+			}
+		}, {
+			"path": "pages/orderList/orderList",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"style": {
+					"navigationBarTitleText": "订单管理"
+				}
+			}
+
+		}, {
+			"path": "pages/orderList/newOrder",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"style": {
+					"navigationBarTitleText": "订单"
+				}
+			}
+
+		}, {
+			"path": "pages/statistics/customer/customer",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"style": {
+					"navigationBarTitleText": "客户列表"
+				}
+			}
+
+		}, {
+			"path": "pages/statistics/warehouse/warehouse",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/statistics/customer/customerDetails",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"style": {
+					"navigationBarTitleText": "客户详情"
+				}
+			}
+		},{
+			"path": "pages/statistics/warehouse/warehouseDetails",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"style": {
+					"navigationBarTitleText": "统计详情"
+				}
+			}
+		}
+	],
+	// #ifdef H5
+	"globalStyle": {
+		"navigationStyle": "custom",
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "BaseCloud",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"topWindow": {
+		// "path": "components/window/top-window-inverse", //另一种风格
+		"path": "components/window/top-window",
+		"style": {
+			"height": "65px"
+		},
+		"matchMedia": {
+			"minWidth": 768
+		}
+	},
+	"leftWindow": {
+		"path": "components/window/left-window",
+		"style": {
+			"width": "200px"
+		},
+		"matchMedia": {
+			"minWidth": 768
+		}
+	}
+	// #endif
+	// #ifndef H5
+	,
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "BaseCloud",
+		"navigationBarBackgroundColor": "#1c1d21",
+		"backgroundColor": "#F8F8F8"
+	}
+	// #endif
+
+
+}

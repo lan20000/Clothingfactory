@@ -1,0 +1,11 @@
+/unpackage/
+/cloudfunctions-aliyun/user-center/node_modules
+/cloudfunctions-aliyun/user-center/package-lock.json
+/cloudfunctions-aliyun/admin/node_modules
+/cloudfunctions-aliyun/admin/package-lock.json
+/cloudfunctions-aliyun/api/node_modules
+/cloudfunctions-aliyun/api/package-lock.json
+/cloudfunctions-aliyun/clearlogs/node_modules
+/cloudfunctions-aliyun/clearlogs/package-lock.json
+/cloudfunctions-aliyun/curl/node_modules
+/cloudfunctions-aliyun/curl/package-lock.json
